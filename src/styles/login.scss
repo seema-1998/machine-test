@@ -1,0 +1,49 @@
+.Modal{
+    padding: 12px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    .form {
+        position: relative;
+        margin: 15px 0 5px 0;
+        left: 18%;
+        transform: translateX(-50%);
+        background: #627d9a;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+        width: 38%;
+        font-size: 14px;
+        cursor: pointer;
+
+
+        .Input{
+            margin: 8px 2px;
+          
+          // Animation trigger for label::before
+          &:focus ~ label{
+            opacity: 1;
+          }
+          // label::before icons
+          &[type='text']
+            ~ label
+              &::before{
+                content: "\f007"}
+          &[type='password']
+            ~ label
+              &::before{
+                content: "\f023"
+              }
+            
+        }
+        .signin{
+            width: 40%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+}
+
+}
